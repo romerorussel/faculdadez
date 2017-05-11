@@ -1,6 +1,16 @@
+/**
+ Fontes
+*/
+@import url('https://fonts.googleapis.com/css?family=Londrina+Shadow');
 #container-login{
     width: 350px;
     margin: 100px auto 0 auto;
+}
+.logo{
+    font-family: 'Londrina Shadow', cursive;
+}
+.header-inicial{
+    margin-bottom:100px;
 }
 .left{
     float:left;
