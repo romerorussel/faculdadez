@@ -1,0 +1,10 @@
+#container-login{
+    width: 350px;
+    margin: 100px auto 0 auto;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}

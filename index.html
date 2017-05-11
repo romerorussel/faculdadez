@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Faculdade Z</title>
+    <link rel="stylesheet" type="text/css" href="frameworks/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+</head>
+    <body>
+        <div class="container-fluid">
+            <div id="container-login">
+                <div class="row">
+                    <header>
+                        <div class="col-md-6">
+
+                        </div>
+                        <div class="col-md-6"></div>
+                    </header>
+                </div><!-- Final da row -->
+                <div class="row">
+                    <form  action="php/login.php" method="post" id="form-login">
+                        <div class="form-group">
+                            <label for="cpf">CPF:</label>
+                            <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite seu CPF aqui">
+                        </div>
+                        <div class="form-group">
+                            <label for="senha">Senha:</label>
+                            <input type="password" name="senha" id="senha" class="form-control" placeholder="Digite sua senha aqui">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Entrar <span class="glyphicon glyphicon-log-in"></span></button>
+
+                    </form>
+                 </div>
+            </div>
+        </div>
+
+    <script src="frameworks/jquery.js"></script>
+    <script src="frameworks/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
