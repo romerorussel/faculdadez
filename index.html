@@ -54,7 +54,7 @@
                                     console.log(retorno);
                                     console.log(arRetorno);
                                 }
-                                //$("msg-retorno").html(retorno + "Logado com sucesso !");
+                                $("msg-retorno").html(retorno.mensagem);
                             },
                             error: function(request, status, errorThrown)
                             {
@@ -96,7 +96,7 @@
                             <input type="password" name="senha" id="senha" class="form-control" placeholder="Digite sua senha aqui" required="true">
                         </div>
                         <button type="button" class="btn btn-primary" id="btn-login">Entrar <span class="glyphicon glyphicon-log-in"></span></button>
-                        <div id="msg-retorno"></div>
+                        <div class id="msg-retorno text-success"><span class="glyphicon glyphicon-ok"></span></div>
                     </form>
                  </div>
             </div>

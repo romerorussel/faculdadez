@@ -1,7 +1,11 @@
 <?php
-session_start();
+/**
+ * Created by PhpStorm.
+ * User: Romero
+ * Date: 14/05/2017
+ * Time: 17:00
+ */
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,16 +46,6 @@ session_start();
             </div>
         </div>
     </div>
-
-    <!--TODO inserir código PHP no lugar correto -->
-    <?php
-    /**
-     * Created by PhpStorm.
-     * User: Romero
-     * Date: 14/05/2017
-     * Time: 17:00
-     */
-    ?>
     <script src="../frameworks/jquery.js"></script>
     <script src="../frameworks/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 </body>
