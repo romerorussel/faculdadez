@@ -5,6 +5,75 @@
     <title>Faculdade Z</title>
     <link rel="stylesheet" type="text/css" href="frameworks/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/css.css">
+    <script src="frameworks/jquery.js"></script>
+    <script>
+        $('document').ready(function(){
+            $("#btn-login").click(function() {
+
+                try {
+                    var cpf = $("#cpf").val();
+                    var senha = $("#senha").val();
+                    var regex = /^\d{11}$/;
+
+                    if (!regex.test(cpf)) {
+                        throw("Por favor digite o seu CPF corretamente com 11 dígitos e apenas números.");
+                    }
+                    if (!(senha.length > 3 && senha.length <= 9)) {
+                        throw("A sua senha deve conter mais de 3 e até 9 dígitos, tente novamente.");
+                    }
+                    if (regex.test(cpf) && senha.length <= 9) {
+
+                        $.ajax({
+                            type: "POST",
+                            url: "php/login.php",
+                            data: "metodo=VerificarLogin&cpf=" + cpf + "&senha=" + senha,
+                            beforeSend: function()
+                            {
+                               // $("#div_load_geral_tabela").show();
+                            },
+                            success: function(retorno)
+                            {
+                                try
+                                {
+                                    var arRetorno = JSON.parse(retorno);
+                                    if(arRetorno[0].valido == "1")
+                                    {
+                                        alert(arRetorno[0].mensagem);
+                                        window.location = "php/painel.php";
+                                    }
+                                    else
+                                    {
+                                        console.log(retorno);
+                                        console.log(arRetorno);
+                                        alert(retorno);
+                                    }
+                                }
+                                catch(erro)
+                                {
+                                    alert("Não foi possível realizar esta operação.");
+                                    console.log(retorno);
+                                    console.log(arRetorno);
+                                }
+                                //$("msg-retorno").html(retorno + "Logado com sucesso !");
+                            },
+                            error: function(request, status, errorThrown)
+                            {
+                                //$("#div_load_geral_tabela").hide();
+                                console.log(request);
+                                console.log(status);
+                                console.log(errorThrown);
+                            }
+                        });
+                    } else {
+                        return false;
+                    }
+                }
+                catch(e){
+                    alert(e);
+                }
+            });
+        });
+    </script>
 </head>
     <body>
         <div class="container-fluid">
@@ -26,15 +95,14 @@
                             <label for="senha">Senha:</label>
                             <input type="password" name="senha" id="senha" class="form-control" placeholder="Digite sua senha aqui" required="true">
                         </div>
-                        <button type="button" onclick="return validaLogin();" class="btn btn-primary">Entrar <span class="glyphicon glyphicon-log-in"></span></button>
-
+                        <button type="button" class="btn btn-primary" id="btn-login">Entrar <span class="glyphicon glyphicon-log-in"></span></button>
+                        <div id="msg-retorno"></div>
                     </form>
                  </div>
             </div>
 
         </div>
-    <script src="js/js.js"></script>
-    <script src="frameworks/jquery.js"></script>
+    <!-- <script src="js/js.js"></script> -->
     <script src="frameworks/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     </body>
 </html>
