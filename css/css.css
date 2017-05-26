@@ -1,20 +1,79 @@
-/**
- Fontes
+/*
+*Define a container default for login screen
 */
-@import url('https://fonts.googleapis.com/css?family=Londrina+Shadow');
 #container-login{
     width: 350px;
     margin: 100px auto 0 auto;
 }
-.logo{
-    font-family: 'Londrina Shadow', cursive;
-}
+
+/*
+* Define margin bot for class hearder-inicial
+*/
 .header-inicial{
     margin-bottom:100px;
 }
+/*
+* Define background for login screen
+*/
+#login-page{
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size:100%;
+    bottom: 0;
+    color: black;
+    left: 0;
+    overflow: auto;
+    padding: 3em;
+    right: 0;
+    top: 0;
+    background-size: cover;
+}
+/*
+* Define default background for all screen
+*/
+.panel-home{
+    background-image: url('../img/home.jpg');
+    background-repeat: no-repeat;
+    background-size:100%;
+    bottom: 0;
+    color: black;
+    left: 0;
+    overflow: auto;
+    padding: 3em;
+    right: 0;
+    top: 0;
+    background-size: cover;
+}
+/*
+* Define margin left for default objects
+*/
 .left{
     float:left;
 }
+/*
+* Define margin right for default objects
+*/
 .right{
     float:right;
+}
+/*
+* Define margin top for default objects
+*/
+.margemTop{
+    margin-top:75px;
+}
+/*
+* Define style for welcome student in home page
+*/
+.ola-aluno{
+    color: #4682B4;
+    font-weight: 600;
+}
+/*
+* Define dafault option for textarea
+*/
+textarea{
+    width: 400px;
+    height: 250px;
+    resize:none;
 }
