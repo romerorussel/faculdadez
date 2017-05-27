@@ -30,8 +30,8 @@
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dLabel">
                        <li><a href="../webcontent/schoolHistory.html">Histórico Escolar</a></li>
-                        <li><a href="../webcontent/disciplinas.html">Disciplinas</a></li>
-                        <li><a href="../webcontent/suporte.html">Suporte</a></li>
+                        <li><a href="../webcontent/disciplines.html">Disciplinas</a></li>
+                        <li><a href="../webcontent/support.html">Suporte</a></li>
                     </ul>
                 </div>
             </div>
